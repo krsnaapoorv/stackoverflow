@@ -10,7 +10,7 @@ const Cards = (props)=>{
                     <a href={props.label.link} className="card-link" target="blank">Stackoverflow Link</a>
                     <div>
                             <p>Toal View Count:  {props.label.view_count}</p>
-                            <p>Raised at:   {Date(props.label.creation_date)}</p>
+                            <p>Raised at:   {new Date(props.label.creation_date*1000).toLocaleString()}</p>
                             <h6>Tags</h6>
                             <div className="row justify-content-center">
                                 {props.label.tags.map(ele =>

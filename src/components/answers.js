@@ -35,7 +35,7 @@ class Answers extends React.Component{
                             <h6>By <a href={ele.owner.link} className="card-link">{ele.owner.display_name}</a></h6>
                             <div>
                                 <p>Is Accepted? : {ele.is_accepted.toString()}</p>
-                                <p>Answered at:   {Date(ele.last_activity_date)}</p>
+                                <p>Answered at:   {new Date(ele.last_activity_date*1000).toLocaleString()}</p>
                             </div>
                             <h4>Answer:-</h4>
                             <div>
